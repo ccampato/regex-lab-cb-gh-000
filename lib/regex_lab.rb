@@ -23,8 +23,8 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  count =  phone.count(/\d/)
-  if count == 10
+  phone.scan(/\d/).count
+  if count.length == 10
     true
   else
     false
